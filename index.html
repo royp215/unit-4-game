@@ -2,19 +2,54 @@
 <html>
 <head>
   <title>Simple Crystal Game</title>
-
-<link rel="stylesheet" type="text/css" href="assests/css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript " src="assests/javascript/game.js"></script> 
-
+<script type="text/javascript " src="assets/javascript/game.js"></script> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 
 <body>
 
-  <h1>Number to Guess: <span id="number-to-guess"></span></h1>
-
-  <!-- Note that this div is now empty. We will fill it dynamically -->
-  <div class="crystals">
+  <div class="page-header">
+    <h1 class="text-center">Crystals Collector</h1>
+  </div>
+  <div class="row">
+      <div class="col-md-12" id="instructions">
+          <strong>Instructions</strong>
+          <p>You will be given a random number at the start of the game</p>
+          <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
+          <p>You win the game by matching your total score to the random number and you lose the game if your total score goes
+              above the random number.
+          </p>
+          <p>Each time the game restarts the value of each crystal will change!</p>
+      </div>
+  </div>
+  <div class="row">
+      <div class="col-md-4" id="randomNumDiv">
+          <p>Number to match: <div id="randomNum"></div></p>
+      </div>
+      <div class="col-md-4" id="winLoss">
+          <p>Wins:<span id="win"></span></p>
+          <p>Losses:<span id="loss"></span></p>
+      </div>
+          <div class="col-md-4" id="totalScore">
+              <p>Your total score is: <div id="score"></div></p>
+          </div>
+  </div>
+  <div class="row" id="crystals">
+      <div class="col-md-3">
+          <button  id="blue"><img src="assets/images/blue.png"></button>
+      </div>
+      <div class="col-md-3">
+          <button id="green"><img src="assets/images/green.png"></button>
+      </div>
+      <div class="col-md-3">
+          <button id="yellow"><img src="assets/images/yellow.png"></button>
+      </div>
+      <div class="col-md-3">
+          <button id="red"><img src="assets/images/red.png"></button>
+      </div>
   </div>
 
   
